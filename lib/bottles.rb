@@ -20,8 +20,25 @@ class Bottles
 
 
   def verses(start, finish)
-    verse(start)
-    verse(finish)
+    someVerses = ""
+    counter = start
+
+    while counter >= finish do
+      newline = "\n"
+
+      if counter == finish
+        newline = ""
+      end
+
+      someVerses = someVerses + verse(counter) + newline
+      counter -= 1
+    end
+
+    return someVerses
+  end
+
+  def song()
+    verses(99, 0)
   end
 
 end
